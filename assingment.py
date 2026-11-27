@@ -1,5 +1,4 @@
 def display_menu():
-    """Displays the menu options to the user."""
     print("\n" + "=" * 30)
     print("      TO-DO LIST MANAGER      ")
     print("=" * 30)
@@ -12,18 +11,16 @@ def display_menu():
 
 
 def view_tasks(todo_list):
-    """Displays all tasks currently in the list."""
     if not todo_list:
         print("\nYour to-do list is empty!")
     else:
         print("\nYOUR TASKS:")
         for index, task in enumerate(todo_list, start=1):
-            # String formatting to present the tasks neatly
             print(f"{index}. {task.capitalize()}")
 
 
 def add_task(todo_list):
-    """Prompts user to add a new task."""
+    
     task = input("\nEnter the task to add: ").strip()
     if task:
         todo_list.append(task)
@@ -33,7 +30,7 @@ def add_task(todo_list):
 
 
 def remove_task(todo_list):
-    """Removes a task by its list number."""
+   
     if not todo_list:
         print("\nYour to-do list is empty! Nothing to remove.")
         return
@@ -51,7 +48,7 @@ def remove_task(todo_list):
 
 
 def clear_tasks(todo_list):
-    """Clears all tasks after user confirmation."""
+    
     if not todo_list:
         print("\nYour to-do list is already empty.")
         return
@@ -65,8 +62,8 @@ def clear_tasks(todo_list):
 
 
 def main():
-    """Main program execution loop."""
-    todo_list = []  # Initialize empty list to store tasks
+    
+    todo_list = []  
 
     while True:
         display_menu()
